@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cpanm Dancer
+cpanm Template
+cpanm Dancer::Plugin::Database
+cpanm DBD::SQLite

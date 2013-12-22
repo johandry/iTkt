@@ -1,0 +1,40 @@
+<div id="page">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+		  <% FOREACH team IN teams %>
+			<tr>
+				<td><% team.id %></td>
+				<td><% team.name %></td>
+				<td><% team.email %></td>
+			</tr>
+			<% END %>
+		</tbody>
+	</table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Team</th>
+			</tr>
+		</thead>
+		<tbody>
+		  <% FOREACH user IN users %>
+			<tr>
+				<td><% user.id %></td>
+				<td><% user.first_name %> <% user.last_name %></td>
+				<td><% user.email %></td>
+				<td><% teams.${user.team_id}.name %> (<% teams.${user.team_id}.email %>)</td>
+			</tr>
+			<% END %>
+		</tbody>
+	</table>
+</div>

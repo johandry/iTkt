@@ -1,0 +1,4 @@
+BEGIN TRANSACTION;
+DROP TRIGGER insert_Users_created_on;
+DROP TABLE IF EXISTS Users;
+COMMIT;
